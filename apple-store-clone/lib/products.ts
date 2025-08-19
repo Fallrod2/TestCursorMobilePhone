@@ -40,7 +40,7 @@ export const products: Product[] = [
   {
     id: "macbook-air-m3-13",
     slug: "macbook-air-m3-13",
-    name: "MacBook Air 13" M3",
+    name: "MacBook Air 13″ M3",
     category: "mac",
     description: "Ultra fin, super puissant. Puce M3.",
     imageUrl: `${CDN}/8756/as-images.apple.com/is/mba13-m3-midnight-select-202403?wid=800&hei=800&fmt=jpeg&qlt=90&.v=1708555425305`,
@@ -50,7 +50,7 @@ export const products: Product[] = [
   {
     id: "macbook-pro-m3-pro-14",
     slug: "macbook-pro-m3-pro-14",
-    name: "MacBook Pro 14"",
+    name: "MacBook Pro 14″",
     category: "mac",
     description: "Pro à tous les niveaux. Puces M3, M3 Pro.",
     imageUrl: `${CDN}/8756/as-images.apple.com/is/mbp14-silver-select-202310?wid=800&hei=800&fmt=jpeg&qlt=90&.v=1697239227878`,
@@ -61,7 +61,7 @@ export const products: Product[] = [
   {
     id: "ipad-pro-m4-11",
     slug: "ipad-pro-m4-11",
-    name: "iPad Pro 11" M4",
+    name: "iPad Pro 11″ M4",
     category: "ipad",
     description: "Ultra fin. Ultra puissant. Puce M4.",
     imageUrl: `${CDN}/8756/as-images.apple.com/is/ipad-pro-11-wifi-select-spaceblack-202405?wid=800&hei=800&fmt=jpeg&qlt=90&.v=1713385578858`,

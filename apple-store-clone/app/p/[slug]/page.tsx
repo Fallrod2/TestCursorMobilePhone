@@ -2,8 +2,7 @@ import Image from "next/image";
 import { formatPrice } from "@/lib/format";
 import { getProductBySlug } from "@/lib/products";
 import { notFound } from "next/navigation";
-import { Button } from "@/components/ui/Button";
-import { useCartStore } from "@/store/cart-store";
+import { AddToCartButton } from "@/components/AddToCartButton";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -42,23 +41,3 @@ export default async function ProductPage({ params }: Props) {
     </div>
   );
 }
-
-function AddToCartButton({
-  data,
-}: {
-  data: {
-    productId: string;
-    name: string;
-    imageUrl: string;
-    priceCents: number;
-    quantity: number;
-  };
-}) {
-  const addItem = useCartStore((s) => s.addItem);
-  return (
-    <Button onClick={() => addItem(data)} className="w-full sm:w-auto">
-      Ajouter au panier
-    </Button>
-  );
-}
-

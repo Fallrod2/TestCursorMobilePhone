@@ -3,7 +3,6 @@ import Stripe from "stripe";
 
 export async function POST(req: Request) {
   try {
-    const body = await req.formData();
     const origin = req.headers.get("origin") ?? "";
 
     const stripeSecret = process.env.STRIPE_SECRET_KEY;
@@ -14,9 +13,7 @@ export async function POST(req: Request) {
       );
     }
 
-    const stripe = new Stripe(stripeSecret, {
-      apiVersion: "2024-06-20",
-    });
+    const stripe = new Stripe(stripeSecret);
 
     // Le panier persiste côté client. Ici, rediriger vers une page Checkout simulée
     // Comme simplification: créer une Session sans lignes si aucune integration côté client.
@@ -38,7 +35,7 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.redirect(session.url!, { status: 303 });
-  } catch (e) {
+  } catch {
     return NextResponse.json({ error: "Erreur serveur" }, { status: 500 });
   }
 }
