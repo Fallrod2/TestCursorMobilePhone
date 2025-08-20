@@ -16,7 +16,7 @@ export default function Home() {
             <p className="text-sm opacity-75">Version mobile et desktop</p>
           </Link>
 
-          <Link href={withBasePath("/apple-store")} className="rounded-lg border border-black/[.08] dark:border-white/[.145] p-4 hover:bg-black/[.02] dark:hover:bg-white/[.02] transition-colors">
+          <Link href={withBasePath("/apple-store")} className="rounded-lg border border-black/[.08] dark:border-white/[.145] p-4 hover:bg-black/[.02] dark:hover_bg-white/[.02] transition-colors">
             <div className="text-lg font-medium">Apple Store</div>
             <p className="text-sm opacity-75">Clone d&apos;une page de l&apos;Apple&nbsp;Store</p>
           </Link>
