@@ -73,7 +73,12 @@ export default function AppleStorePage() {
               <div className="p-6 text-white min-h-[200px] flex flex-col items-start justify-end">
                 <h3 className="text-xl font-semibold">{card.title}</h3>
                 <p className="opacity-90">{card.subtitle}</p>
-                <button className="mt-4 rounded-full bg-white text-black px-4 py-2 text-sm hover:opacity-90">{card.cta}</button>
+                <Link
+                  href={withBasePath(`/apple-store/${encodeURIComponent(card.title.toLowerCase().replaceAll(" ", "-"))}`)}
+                  className="mt-4 rounded-full bg-white text-black px-4 py-2 text-sm hover:opacity-90"
+                >
+                  {card.cta}
+                </Link>
               </div>
             </article>
           ))}
@@ -83,13 +88,13 @@ export default function AppleStorePage() {
           <h2 className="text-lg font-medium">Acheter par catégorie</h2>
           <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
             {["Mac", "iPhone", "iPad", "Watch", "AirPods", "TV & Maison"].map((name) => (
-              <a
+              <Link
                 key={name}
-                href="#"
+                href={withBasePath(`/apple-store/c/${encodeURIComponent(name.toLowerCase().replaceAll(" ", "-"))}`)}
                 className="rounded-xl border border-black/[.08] dark:border-white/[.145] px-3 py-6 text-center hover:bg-black/[.02] dark:hover:bg-white/[.02]"
               >
                 <div className="text-sm font-medium">{name}</div>
-              </a>
+              </Link>
             ))}
           </div>
         </section>
