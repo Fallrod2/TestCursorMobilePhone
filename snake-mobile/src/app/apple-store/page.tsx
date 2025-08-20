@@ -33,7 +33,7 @@ export default function AppleStorePage() {
       subtitle: "L’ultime appareil pour une vie saine.",
       cta: "Acheter",
       color: "from-[#0a0a0a] to-[#0f172a]",
-      image: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MX2X3ref_VW_PF+watch-45-alum-starlight-nc-9s_VW_PF_WF_CO_GEO_EMEA?wid=840&hei=508&fmt=jpeg&qlt=90&.v=1693263142771",
+      image: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MX2X3ref_VW_PF%2Bwatch-45-alum-starlight-nc-9s_VW_PF_WF_CO_GEO_EMEA?wid=840&hei=508&fmt=jpeg&qlt=90&.v=1693263142771",
     },
     {
       title: "AirPods Pro",
@@ -73,10 +73,10 @@ export default function AppleStorePage() {
           {cards.map((card) => (
             <article
               key={card.title}
-              className={`rounded-2xl border border-black/[.08] dark:border-white/[.145] overflow-hidden bg-gradient-to-b ${card.color}`}
+              className={`rounded-2xl border border-black/[.08] dark:border-white/[.145] overflow-hidden bg-gradient-to-b ${card.color} shadow-sm`}
             >
-              <div className="relative aspect-[16/9]">
-                <img src={card.image} alt={card.title} className="w-full h-full object-contain" />
+              <div className="relative aspect-[16/9] bg-black/5">
+                <img src={card.image} alt={card.title} loading="lazy" decoding="async" className="block w-full h-full object-contain rounded-2xl" />
               </div>
               <div className="p-6 text-white flex flex-col items-start justify-end">
                 <h3 className="text-xl font-semibold">{card.title}</h3>
