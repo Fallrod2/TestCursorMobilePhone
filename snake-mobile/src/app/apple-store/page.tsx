@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "Apple Store",
@@ -12,36 +13,42 @@ export default function AppleStorePage() {
       subtitle: "Titanium. Puissant. Pro.",
       cta: "Acheter",
       color: "from-[#0a0a0a] to-[#1a1a1a]",
+      image: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-naturaltitanium?wid=840&hei=508&fmt=jpeg&qlt=90&.v=1692894151261",
     },
     {
       title: "MacBook Air",
       subtitle: "Pensez léger. Pensez grand.",
       cta: "Acheter",
       color: "from-[#0f172a] to-[#111827]",
+      image: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mba13-m3-midnight-select-202403?wid=840&hei=508&fmt=jpeg&qlt=90&.v=1708555425305",
     },
     {
       title: "iPad Pro",
       subtitle: "Boosté par la puce M2.",
       cta: "Acheter",
       color: "from-[#111827] to-[#1f2937]",
+      image: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-wifi-select-spaceblack-202405?wid=840&hei=508&fmt=jpeg&qlt=90&.v=1713385578858",
     },
     {
       title: "Apple Watch",
       subtitle: "L’ultime appareil pour une vie saine.",
       cta: "Acheter",
       color: "from-[#0a0a0a] to-[#0f172a]",
+      image: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MX2X3ref_VW_PF+watch-45-alum-starlight-nc-9s_VW_PF_WF_CO_GEO_EMEA?wid=840&hei=508&fmt=jpeg&qlt=90&.v=1693263142771",
     },
     {
       title: "AirPods Pro",
       subtitle: "Audio immersif. Réduction de bruit.",
       cta: "Acheter",
       color: "from-[#1f2937] to-[#111827]",
+      image: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/airpods-pro-2nd-gen-usb-c-202309?wid=840&hei=508&fmt=jpeg&qlt=90&.v=1693248080138",
     },
     {
       title: "Apple TV 4K",
       subtitle: "Du grand divertissement à la maison.",
       cta: "Acheter",
       color: "from-[#0f172a] to-[#0a0a0a]",
+      image: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MXGY3?wid=840&hei=508&fmt=jpeg&qlt=90&.v=1664896365470",
     },
   ];
 
@@ -69,7 +76,10 @@ export default function AppleStorePage() {
               key={card.title}
               className={`rounded-2xl border border-black/[.08] dark:border-white/[.145] overflow-hidden bg-gradient-to-b ${card.color}`}
             >
-              <div className="p-6 text-white min-h-[200px] flex flex-col items-start justify-end">
+              <div className="relative aspect-[16/9]">
+                <Image src={card.image} alt={card.title} fill sizes="(max-width: 1024px) 100vw, 33vw" className="object-contain" />
+              </div>
+              <div className="p-6 text-white flex flex-col items-start justify-end">
                 <h3 className="text-xl font-semibold">{card.title}</h3>
                 <p className="opacity-90">{card.subtitle}</p>
                 <Link
