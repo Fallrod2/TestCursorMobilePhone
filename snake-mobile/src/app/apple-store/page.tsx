@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export const metadata = {
   title: "Apple Store",
@@ -77,7 +76,7 @@ export default function AppleStorePage() {
               className={`rounded-2xl border border-black/[.08] dark:border-white/[.145] overflow-hidden bg-gradient-to-b ${card.color}`}
             >
               <div className="relative aspect-[16/9]">
-                <Image src={card.image} alt={card.title} fill sizes="(max-width: 1024px) 100vw, 33vw" className="object-contain" />
+                <img src={card.image} alt={card.title} className="w-full h-full object-contain" />
               </div>
               <div className="p-6 text-white flex flex-col items-start justify-end">
                 <h3 className="text-xl font-semibold">{card.title}</h3>
