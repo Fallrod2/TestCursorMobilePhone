@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Snake Mobile",
-  description: "Play Snake on mobile or desktop.",
+  title: {
+    default: "Accueil",
+    template: "%s · Jeux & Démos",
+  },
+  description: "Jouer à Snake et bientôt un clone d'une page Apple Store.",
 };
 
 export default function RootLayout({
