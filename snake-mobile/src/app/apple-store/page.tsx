@@ -74,7 +74,7 @@ export default function AppleStorePage() {
                 <h3 className="text-xl font-semibold">{card.title}</h3>
                 <p className="opacity-90">{card.subtitle}</p>
                 <Link
-                  href={withBasePath(`/apple-store/${encodeURIComponent(card.title.toLowerCase().replaceAll(" ", "-"))}`)}
+                  href={withBasePath("/apple-store#tous-les-produits")}
                   className="mt-4 rounded-full bg-white text-black px-4 py-2 text-sm hover:opacity-90"
                 >
                   {card.cta}
@@ -90,7 +90,7 @@ export default function AppleStorePage() {
             {["Mac", "iPhone", "iPad", "Watch", "AirPods", "TV & Maison"].map((name) => (
               <Link
                 key={name}
-                href={withBasePath(`/apple-store/c/${encodeURIComponent(name.toLowerCase().replaceAll(" ", "-"))}`)}
+                href={withBasePath("/apple-store#tous-les-produits")}
                 className="rounded-xl border border-black/[.08] dark:border-white/[.145] px-3 py-6 text-center hover:bg-black/[.02] dark:hover:bg-white/[.02]"
               >
                 <div className="text-sm font-medium">{name}</div>
