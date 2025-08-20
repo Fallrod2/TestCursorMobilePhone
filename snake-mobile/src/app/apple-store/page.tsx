@@ -1,9 +1,8 @@
 import Link from "next/link";
-import { withBasePath } from "@/lib/paths";
 
 export const metadata = {
   title: "Apple Store",
-  description: "Clone simple d\u2019une page Apple Store",
+  description: "Clone simple d’une page Apple Store",
 };
 
 export default function AppleStorePage() {
@@ -28,7 +27,7 @@ export default function AppleStorePage() {
     },
     {
       title: "Apple Watch",
-      subtitle: "L\u2019ultime appareil pour une vie saine.",
+      subtitle: "L’ultime appareil pour une vie saine.",
       cta: "Acheter",
       color: "from-[#0a0a0a] to-[#0f172a]",
     },
@@ -50,7 +49,7 @@ export default function AppleStorePage() {
     <main className="min-h-screen p-6">
       <div className="mx-auto w-full max-w-[1100px] space-y-8">
         <header className="flex items-center justify-between">
-          <Link href={withBasePath("/")} className="text-sm opacity-80 hover:opacity-100">\u2190 Accueil</Link>
+          <Link href="/" className="text-sm opacity-80 hover:opacity-100">← Accueil</Link>
           <div className="text-2xl font-semibold">Store</div>
           <div className="w-16" />
         </header>
@@ -74,7 +73,7 @@ export default function AppleStorePage() {
                 <h3 className="text-xl font-semibold">{card.title}</h3>
                 <p className="opacity-90">{card.subtitle}</p>
                 <Link
-                  href={withBasePath("/apple-store#tous-les-produits")}
+                  href="/apple-store#tous-les-produits"
                   className="mt-4 rounded-full bg-white text-black px-4 py-2 text-sm hover:opacity-90"
                 >
                   {card.cta}
@@ -90,7 +89,7 @@ export default function AppleStorePage() {
             {["Mac", "iPhone", "iPad", "Watch", "AirPods", "TV & Maison"].map((name) => (
               <Link
                 key={name}
-                href={withBasePath("/apple-store#tous-les-produits")}
+                href="/apple-store#tous-les-produits"
                 className="rounded-xl border border-black/[.08] dark:border-white/[.145] px-3 py-6 text-center hover:bg-black/[.02] dark:hover:bg-white/[.02]"
               >
                 <div className="text-sm font-medium">{name}</div>
@@ -102,4 +101,3 @@ export default function AppleStorePage() {
     </main>
   );
 }
-
