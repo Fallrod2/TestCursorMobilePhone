@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { withBasePath } from "@/lib/paths";
 
 export const metadata = {
   title: "Apple Store",
@@ -49,7 +50,7 @@ export default function AppleStorePage() {
     <main className="min-h-screen p-6">
       <div className="mx-auto w-full max-w-[1100px] space-y-8">
         <header className="flex items-center justify-between">
-          <Link href="/" className="text-sm opacity-80 hover:opacity-100">\u2190 Accueil</Link>
+          <Link href={withBasePath("/")} className="text-sm opacity-80 hover:opacity-100">\u2190 Accueil</Link>
           <div className="text-2xl font-semibold">Store</div>
           <div className="w-16" />
         </header>
