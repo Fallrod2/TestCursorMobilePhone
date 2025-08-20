@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { withBasePath } from "@/lib/paths";
 
 export const metadata = {
   title: "Apple Store",
@@ -79,7 +80,7 @@ export default function AppleStorePage() {
               >
                 <div className={isIphone15Pro ? "relative aspect-[2/1] bg-white" : "relative aspect-[16/9] bg-white"}>
                   <img
-                    src={card.image}
+                    src={withBasePath(card.image)}
                     alt={card.title}
                     loading="lazy"
                     decoding="async"
