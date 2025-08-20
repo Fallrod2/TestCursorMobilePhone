@@ -13,42 +13,42 @@ export default function AppleStorePage() {
       subtitle: "Titanium. Puissant. Pro.",
       cta: "Acheter",
       color: "from-[#0a0a0a] to-[#1a1a1a]",
-      image: "/images/iphone15pro.svg",
+      image: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-15-pro-model-unselect-gallery-2-202309?wid=1680&hei=944&fmt=jpeg&qlt=90&.v=1692892020194",
     },
     {
       title: "MacBook Air",
       subtitle: "Pensez léger. Pensez grand.",
       cta: "Acheter",
       color: "from-[#0f172a] to-[#111827]",
-      image: "/images/macbookair.svg",
+      image: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mba13-m3-midnight-select-202403?wid=1200&hei=700&fmt=jpeg&qlt=90&.v=1708555425305",
     },
     {
       title: "iPad Pro",
       subtitle: "Boosté par la puce M2.",
       cta: "Acheter",
       color: "from-[#111827] to-[#1f2937]",
-      image: "/images/ipadpro.svg",
+      image: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-wifi-select-spaceblack-202405?wid=1200&hei=700&fmt=jpeg&qlt=90&.v=1713385578858",
     },
     {
       title: "Apple Watch",
       subtitle: "L’ultime appareil pour une vie saine.",
       cta: "Acheter",
       color: "from-[#0a0a0a] to-[#0f172a]",
-      image: "/images/watch.svg",
+      image: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MX2X3ref_VW_PF%2Bwatch-45-alum-starlight-nc-9s_VW_PF_WF_CO_GEO_EMEA?wid=1200&hei=700&fmt=jpeg&qlt=90&.v=1693263142771",
     },
     {
       title: "AirPods Pro",
       subtitle: "Audio immersif. Réduction de bruit.",
       cta: "Acheter",
       color: "from-[#1f2937] to-[#111827]",
-      image: "/images/airpodspro.svg",
+      image: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/airpods-pro-2nd-gen-usb-c-202309?wid=1200&hei=700&fmt=jpeg&qlt=90&.v=1693248080138",
     },
     {
       title: "Apple TV 4K",
       subtitle: "Du grand divertissement à la maison.",
       cta: "Acheter",
       color: "from-[#0f172a] to-[#0a0a0a]",
-      image: "/images/appletv.svg",
+      image: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MXGY3?wid=1200&hei=700&fmt=jpeg&qlt=90&.v=1664896365470",
     },
   ];
 
@@ -80,7 +80,7 @@ export default function AppleStorePage() {
               >
                 <div className={isIphone15Pro ? "relative aspect-[2/1] bg-white" : "relative aspect-[16/9] bg-white"}>
                   <img
-                    src={withBasePath(card.image)}
+                    src={card.image}
                     alt={card.title}
                     loading="lazy"
                     decoding="async"
