@@ -85,6 +85,22 @@ export default function AppleStorePage() {
                     loading="lazy"
                     decoding="async"
                     referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      const target = e.currentTarget as HTMLImageElement;
+                      const name = card.title.toLowerCase().replaceAll(" ", "");
+                      const fallback = name.includes("iphone")
+                        ? "/images/iphone15pro.svg"
+                        : name.includes("macbook")
+                        ? "/images/macbookair.svg"
+                        : name.includes("ipad")
+                        ? "/images/ipadpro.svg"
+                        : name.includes("watch")
+                        ? "/images/watch.svg"
+                        : name.includes("airpods")
+                        ? "/images/airpodspro.svg"
+                        : "/images/appletv.svg";
+                      target.src = fallback;
+                    }}
                     className={isIphone15Pro ? "block w-full h-full object-contain p-8" : "block w-full h-full object-contain p-6"}
                   />
                 </div>
