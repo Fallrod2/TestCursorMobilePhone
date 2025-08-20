@@ -70,26 +70,36 @@ export default function AppleStorePage() {
         </section>
 
         <section id="nouveautes" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {cards.map((card) => (
-            <article
-              key={card.title}
-              className={`rounded-2xl border border-black/[.08] dark:border-white/[.145] overflow-hidden bg-gradient-to-b ${card.color} shadow-sm`}
-            >
-              <div className="relative aspect-[16/9] bg-black/5">
-                <img src={card.image} alt={card.title} loading="lazy" decoding="async" className="block w-full h-full object-contain rounded-2xl" />
-              </div>
-              <div className="p-6 text-white flex flex-col items-start justify-end">
-                <h3 className="text-xl font-semibold">{card.title}</h3>
-                <p className="opacity-90">{card.subtitle}</p>
-                <Link
-                  href="/apple-store#tous-les-produits"
-                  className="mt-4 rounded-full bg-white text-black px-4 py-2 text-sm hover:opacity-90"
-                >
-                  {card.cta}
-                </Link>
-              </div>
-            </article>
-          ))}
+          {cards.map((card) => {
+            const isIphone15Pro = card.title === "iPhone 15 Pro";
+            return (
+              <article
+                key={card.title}
+                className="rounded-2xl border border-black/[.08] dark:border-white/[.145] overflow-hidden bg-[#f5f5f7] text-[#1d1d1f] shadow-sm"
+              >
+                <div className={isIphone15Pro ? "relative aspect-[2/1] bg-white" : "relative aspect-[16/9] bg-white"}>
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    loading="lazy"
+                    decoding="async"
+                    referrerPolicy="no-referrer"
+                    className={isIphone15Pro ? "block w-full h-full object-contain p-8" : "block w-full h-full object-contain p-6"}
+                  />
+                </div>
+                <div className="p-6 flex flex-col items-start justify-end">
+                  <h3 className="text-xl font-semibold">{card.title}</h3>
+                  <p className="opacity-90">{card.subtitle}</p>
+                  <Link
+                    href="/apple-store#tous-les-produits"
+                    className="mt-4 rounded-full bg-black text-white px-4 py-2 text-sm hover:opacity-90"
+                  >
+                    {card.cta}
+                  </Link>
+                </div>
+              </article>
+            );
+          })}
         </section>
 
         <section id="tous-les-produits" className="rounded-2xl border border-black/[.08] dark:border-white/[.145] p-6">
