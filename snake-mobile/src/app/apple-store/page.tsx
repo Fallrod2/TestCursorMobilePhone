@@ -84,7 +84,7 @@ export default function AppleStorePage() {
                     loading="lazy"
                     decoding="async"
                     referrerPolicy="no-referrer"
-                    className={isIphone15Pro ? "block w-full h-full object-contain p-8" : "block w-full h-full object-contain p-6"}
+                    className="block w-full h-full object-cover"
                   />
                 </div>
                 <div className="p-6 flex flex-col items-start justify-end">
